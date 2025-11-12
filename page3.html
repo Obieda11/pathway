@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treatment Pathways - HF Pathways</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-treatment">
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            HF Pathways
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page2.html">Diagnosis</a></li>
+            <li><a href="page3.html" class="active">Treatment</a></li>
+            <li><a href="page4.html">Management</a></li>
+            <li><a href="page5.html">End Stage Care</a></li>
+        </ul>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="separator">›</li>
+            <li class="current">Treatment Pathways</li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Treatment Pathways</h1>
+        <p>Evidence-based pharmacological management for all HF phenotypes</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Important Notice -->
+        <div class="important-notice">
+            <p><strong>Important:</strong> All treatment must take into account frailty, palliative and end of life considerations and the patient's wishes. Recent advances in pharmacological treatment have expanded options for patients, aligned with ESC guidelines.</p>
+        </div>
+
+        <!-- Treatment Type Tabs -->
+        <div class="treatment-tabs">
+            <button class="tab-button active orange" onclick="showTreatment('hfref')">HFrEF (EF ≤ 40%)</button>
+            <button class="tab-button yellow" onclick="showTreatment('hfmref')">HFmrEF (EF 41-49%)</button>
+            <button class="tab-button green" onclick="showTreatment('hfpef')">HFpEF (EF ≥ 50%)</button>
+        </div>
+
+        <!-- HFrEF Treatment Content -->
+        <div id="hfref-content" class="treatment-content active">
+            <div class="treatment-card orange">
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Treatment Pathway for HFrEF (EF ≤ 40%)
+                </h2>
+                <p class="ef-subtitle">Reduced Ejection Fraction Heart Failure</p>
+
+                <!-- Four Pillars -->
+                <div class="four-pillars">
+                    <h3>The Four Pillars of HFrEF Treatment</h3>
+                    <p class="pillars-intro">There is no set order for introduction of these medicines. However, <strong>aim to introduce all four classes early after diagnosis.</strong></p>
+
+                    <div class="pillars-grid">
+                        <!-- Pillar 1 -->
+                        <div class="pillar-card">
+                            <span class="pillar-badge">Pillar 1</span>
+                            <h4>ACEi / ARB / ARNI</h4>
+                            <ul>
+                                <li>ACE inhibitor (first line)</li>
+                                <li>ARB only if ACEi intolerant</li>
+                                <li>ARNI if recommended by HF team/cardiology (only licensed for SYMPTOMATIC HFrEF)</li>
+                            </ul>
+                            <p class="pillar-note">Titrate to maximum tolerated dose</p>
+                        </div>
+
+                        <!-- Pillar 2 -->
+                        <div class="pillar-card">
+                            <span class="pillar-badge">Pillar 2</span>
+                            <h4>Beta Blockers</h4>
+                            <ul>
+                                <li>Bisoprolol</li>
+                                <li>Carvedilol</li>
+                                <li>Nebivolol</li>
+                            </ul>
+                            <p class="pillar-note">Licensed for heart failure - titrate to maximum tolerated dose</p>
+                        </div>
+
+                        <!-- Pillar 3 -->
+                        <div class="pillar-card">
+                            <span class="pillar-badge">Pillar 3</span>
+                            <h4>MRA</h4>
+                            <ul>
+                                <li>Spironolactone</li>
+                                <li>Eplerenone</li>
+                            </ul>
+                            <p class="pillar-note">Mineralocorticoid Receptor Antagonist</p>
+                        </div>
+
+                        <!-- Pillar 4 -->
+                        <div class="pillar-card">
+                            <span class="pillar-badge">Pillar 4</span>
+                            <h4>SGLT2 Inhibitors</h4>
+                            <ul>
+                                <li>Dapagliflozin</li>
+                                <li>Empagliflozin</li>
+                            </ul>
+                            <p class="pillar-note">Proven mortality and morbidity benefit</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diuretics -->
+                <div class="diuretics-section">
+                    <h4>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                        </svg>
+                        Diuretics (Symptomatic Treatment)
+                    </h4>
+                    <p>Loop diuretics if fluid retention - use dynamic dosing (up or down) based on clinical status</p>
+                </div>
+
+                <!-- Medication Titration -->
+                <div class="titration-section">
+                    <h3>Medication Titration</h3>
+                    <ul class="titration-list">
+                        <li><strong>ACE/ARB/ARNI</strong> should be titrated to maximum tolerated dose. Note: Entresto (ARNI) is only licensed for patients with HFrEF with SYMPTOMATIC heart failure.</li>
+                        <li><strong>Beta blockers</strong> should be titrated to maximum tolerated dose.</li>
+                        <li><strong>Optimisation</strong> of medicines may be managed by Primary Care with support from HF Specialist services for advice and guidance if required.</li>
+                        <li><strong>Seek advice and guidance</strong> from HF Specialist services to make urgent referral if complex, unstable, or at risk of hospital admission.</li>
+                    </ul>
+                </div>
+
+                <!-- Safety Monitoring -->
+                <div class="safety-section">
+                    <h4>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                            <line x1="12" y1="9" x2="12" y2="13"></line>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                        Safety Monitoring
+                    </h4>
+                    <p>Remember to check U&Es <strong>1-2 weeks</strong> after initiation or dose titration of ACE, ARB, ARNI or MRA.</p>
+                </div>
+
+                <!-- Further Specialist Management -->
+                <div class="specialist-section">
+                    <h3>Further Specialist Management</h3>
+                    <p>If patient still symptomatic despite <strong>OPTIMISED</strong> ACE/ARB/ARNI, BB, MRA, SGLT2i, seek further advice from HF Specialist team as other specialist treatments may be indicated.</p>
+                    <p>This may include:</p>
+                    <ul>
+                        <li>Additional/alternative medical therapy</li>
+                        <li>Device therapy (CRT-P, CRT-D or ICD)</li>
+                    </ul>
+                </div>
+
+                <!-- Follow-up in Primary Care -->
+                <div class="followup-section">
+                    <h3>Follow-up in Primary Care</h3>
+                    <ul class="followup-list">
+                        <li>Undertake 6-monthly review as per NICE guidance</li>
+                        <li>Adjust diuretics as per clinical status</li>
+                        <li>Ensure medicines titrated to maximum tolerated doses</li>
+                        <li>Involve palliative care as required</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- HFmrEF Treatment Content -->
+        <div id="hfmref-content" class="treatment-content">
+            <div class="treatment-card yellow">
+                <h2>Treatment Pathway for HFmrEF (EF 41-49%)</h2>
+                <p class="ef-subtitle">Mildly Reduced Ejection Fraction Heart Failure</p>
+                <p style="color: #555; font-size: 15px; line-height: 1.7; margin-bottom: 20px;">
+                    Consider as extension of HFrEF - treat co-morbidities, add SGLT2i if diabetic/CKD
+                </p>
+                <p style="color: #555; font-size: 15px; line-height: 1.7;">
+                    Treatment approach is similar to HFrEF with focus on the four pillars of therapy. Refer to HF Specialist services for guidance on optimal management strategy.
+                </p>
+            </div>
+        </div>
+
+        <!-- HFpEF Treatment Content -->
+        <div id="hfpef-content" class="treatment-content">
+            <div class="treatment-card green">
+                <h2>Treatment Pathway for HFpEF (EF ≥ 50%)</h2>
+                <p class="ef-subtitle">Preserved Ejection Fraction Heart Failure</p>
+                
+                <p style="color: #555; font-size: 15px; line-height: 1.7; margin-bottom: 30px;">
+                    Management of HFpEF focuses on symptom control with diuretics and comprehensive co-morbidity management to optimize patient outcomes.
+                </p>
+
+                <!-- Key Management Strategies -->
+                <div class="hfpef-management">
+                    <h3>Key Management Strategies</h3>
+                    
+                    <!-- Heart Rate Control -->
+                    <div class="management-item">
+                        <div class="management-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="management-content">
+                            <h4>Heart Rate Control</h4>
+                            <p>Aim for a target heart rate of <strong>70 bpm</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Blood Pressure Control -->
+                    <div class="management-item">
+                        <div class="management-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <div class="management-content">
+                            <h4>Blood Pressure Control</h4>
+                            <p>Manage BP in line with <strong>Hypertension guidelines</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Diabetes Control -->
+                    <div class="management-item">
+                        <div class="management-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                        </div>
+                        <div class="management-content">
+                            <h4>Diabetes Control</h4>
+                            <p>Ensure diabetes is <strong>well controlled</strong></p>
+                            <p class="management-note">Consider SGLT2 inhibitors (Dapagliflozin or Empagliflozin) if diabetic or CKD</p>
+                        </div>
+                    </div>
+
+                    <!-- Anaemia Management -->
+                    <div class="management-item">
+                        <div class="management-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <div class="management-content">
+                            <h4>Anaemia Management</h4>
+                            <p>Ensure anaemia is managed appropriately</p>
+                            <p class="management-note">Include <strong>iron studies</strong> in assessment</p>
+                        </div>
+                    </div>
+
+                    <!-- Diuretic Management -->
+                    <div class="management-item">
+                        <div class="management-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="management-content">
+                            <h4>Loop Diuretic Management</h4>
+                            <p>Titrate loop diuretic <strong>according to symptoms</strong></p>
+                            <p class="management-note">Use dynamic dosing (up or down) based on clinical status and fluid retention</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Considerations -->
+                <div class="considerations-box">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        Additional Considerations
+                    </h3>
+                    <ul>
+                        <li><strong>Lifestyle modifications:</strong> Weight management, exercise programs, dietary sodium restriction</li>
+                        <li><strong>Regular monitoring:</strong> 6-monthly review as per NICE guidance</li>
+                        <li><strong>Specialist referral:</strong> If symptoms inadequately controlled or diagnostic uncertainty</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Treatment Principles -->
+        <div class="principles-box">
+            <h3>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                Key Treatment Principles
+            </h3>
+            <ul class="principles-list">
+                <li><strong>HFrEF:</strong> Four pillars (ACE/ARB/ARNI + BB + MRA + SGLT2i) - introduce early, titrate to max tolerated</li>
+                <li><strong>HFmrEF:</strong> Consider as extension of HFrEF - treat co-morbidities, add SGLT2i if diabetic/CKD</li>
+                <li><strong>HFpEF:</strong> Control HR (target 70bpm), BP (per HTN guidelines), diabetes, anaemia (inc. iron studies); titrate diuretics to symptoms; consider SGLT2i if diabetic/CKD</li>
+                <li><strong>All phenotypes:</strong> Monitor U&Es after medication changes, provide self-management education</li>
+                <li><strong>Refer to specialist services</strong> if complex, unstable, or inadequate response to optimised therapy</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollTopBtn" onclick="scrollToTop()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
